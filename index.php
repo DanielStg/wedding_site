@@ -10,7 +10,7 @@
   </style>
  </head>
  <body>
-<?php echo "My first PHP script!"; ?>
+<?php echo "First git test"; ?>
      
      <div class="header_buttons">
         
