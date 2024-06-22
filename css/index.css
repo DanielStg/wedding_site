@@ -1,0 +1,54 @@
+/* COLOR PALLET
+#E8CFC1 - pink background
+#CE6857 - Flowers
+#FFFFFF - white
+#231f20 - grey/black
+#000000 - true black
+*/
+
+
+
+a{
+    text-decoration: none;
+}
+.welcome_page{
+    text-align: center;
+    align-content: center;
+    color:black;
+    border: 2px solid #CE6857;
+    background:#FFFFFF;
+    
+    /* div width */
+    width: 40%;
+    
+    /* keeps centered somehow idfk */
+    position:absolute;
+    margin: 0;
+    /* centers content */
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-40%);
+    
+    height: 50%;
+
+    /* margin to top and bottom so it looks tidy */
+    margin-top: 1%;
+    margin-bottom: 1%;
+     
+}
+
+#button_rsvp{
+    padding: 10px 90px; /* CHANGE THIS LATER Some padding */
+    cursor: pointer;
+    border:none;    
+    background-color: #E8CFC1;
+}
+
+#button_rsvp:hover {
+  background-color: #CE6857;
+} 
+
+#timer{
+    font-size: 40px;
+}
+

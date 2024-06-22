@@ -1,0 +1,49 @@
+/* COLOR PALLET
+#E8CFC1 - pink background
+#CE6857 - Flowers
+#FFFFFF - white
+#231f20 - grey/black
+#000000 - true black
+*/
+
+
+body{
+    background: #E8CFC1;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.header_buttons{
+    width: 60%;
+    /*border: 2px solid white; */
+    
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    justify-content: center;
+    display: flex;   
+}
+
+.header_buttons button {
+    padding: 10px 90px; /* CHANGE THIS LATER Some padding */
+    cursor: pointer;
+    width: 100%; /* Set a width if needed */
+    border-top:2px solid #CE6857;
+    border-bottom: 2px solid #CE6857;
+    border-left: none;
+    border-right: none;
+}
+
+#button_index{
+    border-left: 2px solid #CE6857;
+}
+
+#button_photos{
+    border-right: 2px solid #CE6857;
+}
+
+
+/* Add a background color on hover */
+.header_buttons button:hover {
+  background-color: #CE6857;
+} 

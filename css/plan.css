@@ -1,0 +1,71 @@
+/* COLOR PALLET
+#E8CFC1 - pink background
+#CE6857 - Flowers
+#FFFFFF - white
+#231f20 - grey/black
+#000000 - true black
+*/
+
+
+a{
+    text-decoration: none;
+}
+.plan_page{
+    text-align: center;
+    color:black;
+    border: 2px solid black;
+    background:rgba(255,255,255, 0.8);
+    
+    /* div width */
+    width: 60%;
+    /* keeps centered somehow idfk */
+    position: relative;
+    /* centers content horizontally */
+    left: 50%;
+    transform: translate(-50%);
+
+    /* margin to top and bottom so it looks tidy */
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #E8CFC1;
+    color: #000000;
+    cursor: pointer;
+    /* Padding sets how thicc */
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #CE6857;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible_content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
