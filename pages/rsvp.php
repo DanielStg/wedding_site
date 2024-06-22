@@ -26,36 +26,71 @@
          <p id="text_rsvp"><b>RSVP PAGE</b></p>
 
          <!-- Name, ceremony/reception, require accomodation, -->
-         <form class="form_rsvp" onsubmit="WriteToFile(this)">
+         <form class="form_rsvp" id="form_rsvp" method="post" action="../php/rsvp_scripts.php">
              <label for="name">Name</label><br>
-             <input type="text" id="fname" value="first and last"><br>
+             <input type="text" name="fname" autocomplete="off" placeholder="first name"><br>
              
              <br><label>Please let us know if you're coming to the reception as well as the ceremony</label><br>
-             <input type="radio" id="ceremony" name="events" value="ceremony">
+             <input type="radio" name="events" value="ceremony">
              <label for="ceremony">I'm only coming to the ceremony</label><br>
-             <input type="radio" id="reception" name="events" value="reception">
+             <input type="radio" name="events" value="reception">
              <label for="reception">I'm coming to both the ceremony and reception</label><br>
         
              
              <br><label>Do you have any dietry requirements?</label><br>
-             <input type="checkbox" id="vegeterian" name="diet" value="vegeterian">
-             <label for="noaccom">Vegeterian</label><br>
-             <input type="checkbox" id="vegan" name="diet" value="vegan">
-             <label for="yesaccom">Vegan</label><br>
-             <input type="checkbox" id="gluten" name="diet" value="gluten free">
-             <label for="yesaccom">Gluten Free</label><br>
-             <input type="checkbox" id="dairy" name="diet" value="dairy free">
-             <label for="yesaccom">Dairy Free</label><br>
-             <input type="checkbox" id="nut" name="diet" value="nut free">
-             <label for="yesaccom">Nut Free</label><br>
-             <input type="checkbox" id="nut" name="diet" value="other">
-             <label for="yesaccom">Other</label>
-             <input type="text" id="other" name="diet" value="specify"><br>
              
-             <br><input type="submit" value="RSVP"><br>
+             <input type="checkbox" name="diet" value="none">
+             <label>None</label><br>
+             <input type="checkbox" name="diet" value="vegeterian">
+             <label>Vegeterian</label><br>
+             <input type="checkbox" name="diet" value="vegan">
+             <label>Vegan</label><br>
+             <input type="checkbox" name="diet" value="gluten free">
+             <label>Gluten Free</label><br>
+             <input type="checkbox" name="diet" value="dairy free">
+             <label>Dairy Free</label><br>
+             <input type="checkbox" name="diet" value="nut free">
+             <label>Nut Free</label><br>
+            
+            <!-- TODO
+                * Allow selection of multiple diety reqs
+                * Stay on page or redirect after submission
 
+-->
+              
+            
+             <br><input id="button_submit" class="btn btn-sucess" type="submit" value="RSVP"><br>
+
+            <!-- <div class="form-group">
+            <label>
+                <span>Username</span>
+                <input placeholder="Username" autocomplete="off" type="text" name="username">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <span>Password</span>
+                <input placeholder="Password" autocomplete="off" type="password" name="password">
+            </label>
+        </div>
+        <input id="button1" class="btn btn-success" type="submit" value="Login"> 
+-->
          </form>
-         
+        <script>
+            const EL_formRSVP = document.querySelector("#form-rsvp");
+            EL_formRSVP.addEventListener("submit", (ev) => {
+                ev.preventDefault(); // Stop default form submit - we'll use AJAX
+                fetch(EL_formRSVP.action, {
+                    method: 'POST',
+                    body: new FormData(EL_formRSVP),
+                }).then(res => res.json()).then(data => {
+                    // Hide the form
+                    EL_formRSVP.hidden = true;
+                    // Show the user name
+                    document.querySelector("[data-firstname]").textContent = data.fname;
+                });
+            });
+        </script> 
     </div>
         
  </body>
