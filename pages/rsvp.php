@@ -7,7 +7,7 @@
   <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1">
   <style>
   </style>
-  <script src="../js/rsvp_functions.js">
+  <script>
   </script>
  </head>
  <body>
@@ -58,7 +58,6 @@
 
 -->
               
-            
              <br><input id="button_submit" class="btn btn-sucess" type="submit" value="RSVP"><br>
 
             <!-- <div class="form-group">
@@ -76,21 +75,67 @@
         <input id="button1" class="btn btn-success" type="submit" value="Login"> 
 -->
          </form>
-        <script>
-            const EL_formRSVP = document.querySelector("#form-rsvp");
-            EL_formRSVP.addEventListener("submit", (ev) => {
-                ev.preventDefault(); // Stop default form submit - we'll use AJAX
+
+         <script>
+            //Create a const and select the form
+            const EL_formRSVP = document.querySelector("#form_rsvp");
+            
+            //Add an event listener for when the form submits
+            // addEventListener("type", func());
+            // (ev) => {} is creating function
+            EL_formRSVP.addEventListener("submit", (ev) => { 
+
+                //Prevents default form submit
+                ev.preventDefault();
+
+                //Fetch the data from the form action (submit)
                 fetch(EL_formRSVP.action, {
-                    method: 'POST',
-                    body: new FormData(EL_formRSVP),
-                }).then(res => res.json()).then(data => {
-                    // Hide the form
-                    EL_formRSVP.hidden = true;
-                    // Show the user name
-                    document.querySelector("[data-firstname]").textContent = data.fname;
+                    method: 'POST', //POST method
+                    body: new FormData(EL_formRSVP), //Turns form data into JSON string
+                }).then(res => res.json()).then(data =>{
+                    console.log(data);
                 });
+                
+                
             });
+                //.then(res => res.json()).then(data => { //res.json takes result json and creates js object from it
+                    // Hide the form                        Takes that object
+                    //EL_formRSVP.hidden = true;
+                    // Show the user name
+                    //document.querySelector("[data-fname]").textContent = data.fname;
+                //});
+            //});
         </script> 
+                <!-- EXPLORE THIS JQUERY LATER - Might be simpler of above -->
+                <!-- $(document).ready(function(){
+                var $form = $('form');
+                $form.submit(function(){
+                    $.post($(this).attr('action'), $(this).serialize(), function(response){
+                            // do something here on success
+                    },'json');
+                    return false;
+                });
+                });
+                
+                // this is the id of the form
+                $("#idForm").submit(function(e) {
+
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+                    var form = $(this);
+                    var actionUrl = form.attr('action');
+                    
+                    $.ajax({
+                        type: "POST",
+                        url: actionUrl,
+                        data: form.serialize(), // serializes the form's elements.
+                        success: function(data)
+                        {
+                        alert(data); // show response from the php script.
+                        }
+                    });
+                    
+                });-->
     </div>
         
  </body>

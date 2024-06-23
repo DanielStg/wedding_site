@@ -6,7 +6,6 @@ if (
     && isset($_POST["diet"])
     
 ) {
-    echo "section 1";
     $json = json_encode($_POST).PHP_EOL;
     //$message = $json.PHP_EOL;
     // Save JSON to file
