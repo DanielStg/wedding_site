@@ -15,10 +15,10 @@
          <div class="header_buttons">
         
             <a href="../index.php"><button id=button_index type="button">Home</button></a>
-            <a href="../pages/rsvp.html"><button id=button_rsvp type="button">RSVP</button></a>
+            <a href="../pages/rsvp.php"><button id=button_rsvp type="button">RSVP</button></a>
             <a href="../pages/plan.html"><button id=button_plan type="button">Details</button></a>
             <a href="../pages/query.html"><button id=button_queries type="button">Questions</button></a>
-            <a href="../index.html"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
+            <a href="../index.php"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
         
 
      </div>
@@ -54,26 +54,10 @@
             
             <!-- TODO
                 * Allow selection of multiple diety reqs
-                * Stay on page or redirect after submission
-
--->
+            -->
               
              <br><input id="button_submit" class="btn btn-sucess" type="submit" value="RSVP"><br>
 
-            <!-- <div class="form-group">
-            <label>
-                <span>Username</span>
-                <input placeholder="Username" autocomplete="off" type="text" name="username">
-            </label>
-        </div>
-        <div class="form-group">
-            <label>
-                <span>Password</span>
-                <input placeholder="Password" autocomplete="off" type="password" name="password">
-            </label>
-        </div>
-        <input id="button1" class="btn btn-success" type="submit" value="Login"> 
--->
          </form>
 
          <script src="../js/rsvp_functions.js"></script>

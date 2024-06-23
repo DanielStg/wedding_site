@@ -18,7 +18,7 @@
             <a href="pages/rsvp.php"><button type="button">RSVP</button></a>
             <a href="pages/plan.html"><button type="button">Details</button></a>
             <a href="pages/query.html"><button type="button">Questions</button></a>
-            <a href="index.html"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
+            <a href="index.php"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
         
 
      </div>
@@ -27,7 +27,7 @@
          <p id="text_welcome"><b>THE WEDDING OF</b></p>
          <p><b>Loren & Daniel</b></p>
          <p><b>8th February 2025</b></p>
-         <a href="pages/rsvp.html"><button id="button_rsvp" type="button">RSVP</button></a>
+         <a href="pages/rsvp.php"><button id="button_rsvp" type="button">RSVP</button></a>
          
          <!-- Display the countdown timer in an element --> <!-- LATER: Load as session to avoid lag -->
          <p>The big day is in:</p>
