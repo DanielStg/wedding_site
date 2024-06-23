@@ -10,7 +10,6 @@
   </style>
  </head>
  <body>
-<?php echo "First git test"; ?>
      
      <div class="header_buttons">
         

@@ -11,8 +11,7 @@
   </script>
  </head>
  <body>
-<?php echo "RSVP PHP!"; ?>
-         <div class="header_buttons">
+        <div class="header_buttons">
         
             <a href="../index.php"><button id=button_index type="button">Home</button></a>
             <a href="../pages/rsvp.php"><button id=button_rsvp type="button">RSVP</button></a>
