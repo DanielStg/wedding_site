@@ -23,3 +23,30 @@
 {"fname":"alert","events":"reception","diet":"none"}
 {"fname":"cash","events":"reception","diet":"none"}
 {"fname":"now this should work","events":"reception","diet":"none"}
+{"fname":"pc test","events":"reception","diet":"vegan"}
+{"fname":"q","events":"ceremony","diet":"nut free"}
+{"fname":"q","events":"ceremony","diet":"nut free"}
+{"fname":"q","events":"ceremony","diet":"gluten free"}
+{"fname":"q","events":"reception","diet":"vegeterian"}
+{"fname":"q","events":"reception","diet":"none"}
+{"fname":"q","events":"ceremony","diet":"vegeterian"}
+{"fname":"qdwqd","events":"ceremony","diet":"vegeterian"}
+{"fname":"q","events":"reception","diet":"vegeterian"}
+{"fname":"w","events":"reception","diet":"vegan"}
+{"fname":"e","events":"ceremony","diet":"vegan"}
+{"fname":"e","events":"reception","diet":"vegeterian"}
+{"fname":"R","events":"ceremony","diet":"vegeterian"}
+{"fname":"R","events":"reception","diet":"vegeterian"}
+{"fname":"R","events":"reception","diet":"vegeterian"}
+{"fname":"T","events":"reception","diet":["none","vegeterian","vegan"]}
+{"fname":"T","events":"reception","diet":["none","vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"G","events":"reception","diet":["vegeterian","vegan"]}
+{"fname":"dANIEL","events":"ceremony","diet":["none","vegan","dairy free","nut free"]}
