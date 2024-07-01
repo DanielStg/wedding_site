@@ -15,12 +15,12 @@ a{
     text-align: center;
     align-content: center;
     color:black;
-    border: 2px solid #CE6857;
-    background:#FFFFFF;
-    
+    border: 1px solid #CE6857;
+    /* background:#FFFFFF; */
+    box-shadow: 0px 0px 50px #CE6857;
     /* div width */
-    width: 40%;
-    
+    width: 55%;
+
     /* keeps centered somehow idfk */
     position:absolute;
     margin: 0;
@@ -29,7 +29,7 @@ a{
     top: 40%;
     transform: translate(-50%,-40%);
     
-    height: 50%;
+    height: 60%;
 
     /* margin to top and bottom so it looks tidy */
     margin-top: 1%;

@@ -6,40 +6,61 @@
 #000000 - true black
 */
 
+@font-face{
+    font-family: homeFont;
+    src: url(../font/CormorantGaramond-Light.ttf);
+}
+
+@font-face{
+    font-family: namesFont;
+    src: url(../font/CormorantGaramond-LightItalic.ttf);
+}
 
 body{
-    background: #E8CFC1;
+    /* background: #E8CFC1; */
+    background-image: url("../images/wedding_theme.png");
     background-size: cover;
-    font-family: sans-serif;
+    
+
+    
 }
+
+#text_welcome{
+    font-family: homeFont;
+    font-size: 40px;
+}
+#text_name{
+    font-family: namesFont;
+    font-size: 40px;
+    
+}
+
 
 .header_buttons{
     width: 60%;
-    /*border: 2px solid white; */
-    
     left: 50%;
     transform: translate(-50%);
     position: relative;
     justify-content: center;
     display: flex;   
 }
-
-.header_buttons button {
+ 
+ .header_buttons button {
     padding: 10px 90px; /* CHANGE THIS LATER Some padding */
     cursor: pointer;
     width: 100%; /* Set a width if needed */
-    border-top:2px solid #CE6857;
-    border-bottom: 2px solid #CE6857;
+    border-top:1px solid #CE6857;
+    border-bottom: 1px solid #CE6857;
     border-left: none;
     border-right: none;
-}
+}  
 
 #button_index{
-    border-left: 2px solid #CE6857;
+    border-left: 1px solid #CE6857;
 }
 
 #button_photos{
-    border-right: 2px solid #CE6857;
+    border-right: 1px solid #CE6857;
 }
 
 
