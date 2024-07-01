@@ -11,7 +11,8 @@
 a{
     text-decoration: none;
 }
-.welcome_page{
+.welcome_card{
+    
     text-align: center;
     align-content: center;
     color:black;
@@ -28,19 +29,26 @@ a{
     left: 50%;
     top: 40%;
     transform: translate(-50%,-40%);
-    
     height: 60%;
 
     /* margin to top and bottom so it looks tidy */
     margin-top: 1%;
     margin-bottom: 1%;
-     
+
+    font-size: 2em;  
+}
+
+@media (max-width: 900px) {
+    .welcome_card {
+      font-size: 4vw;
+    }
 }
 
 #button_rsvp{
-    padding: 10px 90px; /* CHANGE THIS LATER Some padding */
+    padding: 10px 0px; /* CHANGE THIS LATER Some padding */
     cursor: pointer;
-    border:none;    
+    border:none;  
+    width: 100%;  
     background-color: #E8CFC1;
 }
 

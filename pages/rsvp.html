@@ -1,65 +1,111 @@
 <!DOCTYPE html>
-<html lang='en'>
- <head>
-     <link rel="stylesheet" href="../css/rsvp.css">
-     <link rel="stylesheet" href="../css/theme.css">
-  <title>RSVP</title>
-  <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  </style>
-  <script>
-  </script>
- </head>
- <body>
-        <div class="header_buttons">
-        
-            <a href="../index.html"><button id=button_index type="button">Home</button></a>
-            <a href="../pages/rsvp.html"><button id=button_rsvp type="button">RSVP</button></a>
-            <a href="../pages/plan.html"><button id=button_plan type="button">Details</button></a>
-            <a href="../pages/query.html"><button id=button_queries type="button">Questions</button></a>
-            <a href="../index.html"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
-        
-
-     </div>
-     <div class="rsvp_page">
-         <p id="text_rsvp"><b>RSVP PAGE</b></p>
-
-         <!-- Name, ceremony/reception, require accomodation, -->
-         <form class="form_rsvp" id="form_rsvp" method="post" action="../php/rsvp_scripts.php">
-             <label for="name">Name</label><br>
-             <input type="text" name="fname" autocomplete="off" placeholder="first name"><br>
-             
-             <br><label>Please let us know if you're coming to the reception as well as the ceremony</label><br>
-             <input type="radio" name="events" value="ceremony">
-             <label for="ceremony">I'm only coming to the ceremony</label><br>
-             <input type="radio" name="events" value="reception">
-             <label for="reception">I'm coming to both the ceremony and reception</label><br>
-        
-             
-             <br><label>Do you have any dietry requirements?</label><br>
-             
-             <input type="checkbox" name="diet[]" value="none">
-             <label>None</label><br>
-             <input type="checkbox" name="diet[]" value="vegeterian">
-             <label>Vegeterian</label><br>
-             <input type="checkbox" name="diet[]" value="vegan">
-             <label>Vegan</label><br>
-             <input type="checkbox" name="diet[]" value="gluten free">
-             <label>Gluten Free</label><br>
-             <input type="checkbox" name="diet[]" value="dairy free">
-             <label>Dairy Free</label><br>
-             <input type="checkbox" name="diet[]" value="nut free">
-             <label>Nut Free</label><br>
-        
-              
-             <br><input id="button_submit" class="btn btn-sucess" type="submit" value="RSVP"><br>
-
-         </form>
-
-         <script src="../js/rsvp_functions.js"></script>
-        
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/rsvp.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>RSVP</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- side panel -->
+        <div class="side-panel">
+            <div class="header_buttons">
+                <a href="../index.html"
+                  ><button id="button_index" type="button">Home</button></a
+                >
+                <a href="../pages/rsvp.html"><button type="button">RSVP</button></a>
+                <a href="../pages/plan.html"><button type="button">Details</button></a>
+                <a href="../pages/query.html"
+                  ><button type="button">Questions</button></a
+                >
+                <a href="../index.html"
+                  ><button
+                    id="button_photos"
+                    type="button"
+                    onclick="alert('coming soon!')"
+                  >
+                    Photos
+                  </button></a
+                >
+              </div>
+        </div>
+        <button class="side-panel-toggle" type="button">
+          <span class="material-icons sp-icon-open"
+            >keyboard_double_arrow_right</span
+          >
+          <span class="material-icons sp-icon-close"
+            >keyboard_double_arrow_left</span
+          >
+        </button>
     
+    <div class="rsvp_page">
+      <p id="text_rsvp"><b>RSVP</b></p>
+
+      <!-- Name, ceremony/reception, require accomodation, -->
+      <form
+        class="form_rsvp"
+        id="form_rsvp"
+        method="post"
+        action="../php/rsvp_scripts.php"
+      >
+      <div class="rsvp_element">
+            <label for="name">Name</label><br />
+            <input
+            type="text"
+            name="fname"
+            autocomplete="off"
+            placeholder="first name"
+            /><br />
+      </div>
+      <div class="rsvp_element">
+            <label
+            >Please let us know if you're coming to the reception as well as the
+            ceremony</label
+            ><br />
+            <input type="radio" name="events" value="ceremony" />
+            <label for="ceremony">I'm only coming to the ceremony</label><br />
+            <input type="radio" name="events" value="reception" />
+            <label for="reception"
+            >I'm coming to both the ceremony and reception</label
+            ><br />
     </div>
-        
- </body>
+    <div class="rsvp_element">
+        <label>Do you have any dietry requirements?</label><br />
+
+        <input type="checkbox" name="diet[]" value="none" />
+        <label>None</label><br />
+        <input type="checkbox" name="diet[]" value="vegeterian" />
+        <label>Vegeterian</label><br />
+        <input type="checkbox" name="diet[]" value="vegan" />
+        <label>Vegan</label><br />
+        <input type="checkbox" name="diet[]" value="gluten free" />
+        <label>Gluten Free</label><br />
+        <input type="checkbox" name="diet[]" value="dairy free" />
+        <label>Dairy Free</label><br />
+        <input type="checkbox" name="diet[]" value="nut free" />
+        <label>Nut Free</label><br />
+</div>
+<div class="rsvp_element">
+        <br /><input
+          id="button_submit"
+          class="btn btn-sucess"
+          type="submit"
+          value="RSVP"
+        /><br />
+        </div>
+      </form>
+
+      <script src="../js/panel.js"></script>
+      <script src="../js/rsvp_functions.js"></script>
+    </div>
+  </body>
 </html>

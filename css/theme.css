@@ -16,55 +16,103 @@
     src: url(../font/CormorantGaramond-LightItalic.ttf);
 }
 
-body{
-    /* background: #E8CFC1; */
-    background-image: url("../images/wedding_theme.png");
-    background-size: cover;
-    
-
-    
+label, p {
+    font-family:'Lucida sans', 'Lucinda Geneva';
 }
+
+body{
+    background-image: url("../images/wedding_theme.png");
+    background-repeat: no-repeat;
+    /* background-size: 100vw 105vh; */
+    background-size: 100vw;
+    /* background-size: cover; */
+       
+}
+
 
 #text_welcome{
-    font-family: homeFont;
-    font-size: 40px;
+    font-family: homeFont;  
 }
 #text_name{
-    font-family: namesFont;
-    font-size: 40px;
+    font-family: namesFont;   
+}
+
+.header_buttons{
+    position: absolute;
+    z-index: 1;
+    display: block;   
     
 }
 
-
-.header_buttons{
-    width: 60%;
-    left: 50%;
-    transform: translate(-50%);
-    position: relative;
-    justify-content: center;
-    display: flex;   
-}
+/* @media (max-width: 900px){
+    .header_buttons{
+        display: block;
+    }
+} */
  
  .header_buttons button {
-    padding: 10px 90px; /* CHANGE THIS LATER Some padding */
+    padding: 10px 0px; /* CHANGE THIS LATER Some padding */
     cursor: pointer;
-    width: 100%; /* Set a width if needed */
-    border-top:1px solid #CE6857;
-    border-bottom: 1px solid #CE6857;
-    border-left: none;
-    border-right: none;
+    border: none;
+    width:100%;
+    text-align: center;
+    background-color: #E8CFC1;
 }  
-
-#button_index{
-    border-left: 1px solid #CE6857;
-}
-
-#button_photos{
-    border-right: 1px solid #CE6857;
-}
-
 
 /* Add a background color on hover */
 .header_buttons button:hover {
   background-color: #CE6857;
 } 
+
+.wrapper {
+    display:flex;
+    height:100vh;
+}
+
+.side-panel {
+    display: none;
+    z-index: 1;
+    position: relative;
+    width: 200px;
+    flex-shrink: 0;
+    padding-top: 40px;
+    background: #CE6857;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
+    /* box-shadow: 0px 0px 50px #CE6857; */
+  }
+
+/* Side panel button */
+.side-panel-toggle{
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #CE6857;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* .side-panel-toggle:hover {
+    background: #E8CFC1;
+  } */
+  
+.sp-icon-close {
+display: none !important;
+}
+
+.side-panel-open .side-panel {
+display: initial;
+}
+  
+.side-panel-open .sp-icon-open {
+display: none !important;
+}
+  
+.side-panel-open .sp-icon-close {
+display: initial !important;
+}

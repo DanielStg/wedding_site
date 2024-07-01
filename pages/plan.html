@@ -4,22 +4,42 @@
 
      <link rel="stylesheet" href="../css/plan.css">
      <link rel="stylesheet" href="../css/theme.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <title>PLAN</title>
   <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1">
   <style>
   </style>
  </head>
  <body>
-     
-    <div class="header_buttons">
-        
-            <a href="../index.html"><button id=button_index type="button">Home</button></a>
-            <a href="../pages/rsvp.html"><button id=button_rsvp type="button">RSVP</button></a>
-            <a href="../pages/plan.html"><button id=button_plan type="button">Details</button></a>
-            <a href="../pages/query.html"><button id=button_queries type="button">Questions</button></a>
-            <a href="../index.html"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
-        
-    </div>
+     <!-- Wrapper -->
+     <div class="wrapper">
+        <!-- side panel -->
+        <div class="side-panel">
+          <div class="header_buttons">
+            <a href="../index.html"
+              ><button id="button_index" type="button">Home</button></a
+            >
+            <a href="../pages/rsvp.html"><button type="button">RSVP</button></a>
+            <a href="../pages/plan.html"><button type="button">Details</button></a>
+            <a href="../pages/query.html"
+              ><button type="button">Questions</button></a
+            >
+            <a href="../index.html"
+              ><button
+                id="button_photos"
+                type="button"
+                onclick="alert('coming soon!')"
+              >
+                Photos
+              </button></a
+            >
+          </div>
+        </div>
+        <button class="side-panel-toggle" type="button">
+          <span class="material-icons sp-icon-open">keyboard_double_arrow_right</span>
+          <span class="material-icons sp-icon-close">keyboard_double_arrow_left</span>
+        </button>
+    
     <div class="plan_page">
          <p id="text_plan"><b>THE PLAN!</b></p>
          <button type="button" class="collapsible">Accommodation</button>
@@ -64,6 +84,7 @@
 
      </div>
      
+     <script src="../js/panel.js"></script>
      <script src="../js/plan.js"></script>
  </body>
 </html>
