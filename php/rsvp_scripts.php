@@ -8,7 +8,7 @@ if (
 ) {
 
     $guestname = $_POST["fname"];
-    $guestdiet = implode(',', $_POST["diet"]);
+    $guestdiet = implode(',', $_POST["diet"]); //send array as string
 
     $servername = "localhost";
     $username = "root";

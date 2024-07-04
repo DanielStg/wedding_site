@@ -8,6 +8,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <title>Wedding of Loren and Daniel</title>
     <meta
       charset="utf-8"
@@ -52,16 +56,18 @@
         >
       </button>
 
-      <div class="welcome_card">
-        <p id="text_welcome"><b>Welcome to the secret page</b></p>
+      <div class="welcome_card table-responsive">
+        <h1 id="text_welcome"><b>Welcome to the secret page</b></h1>
+        <h2>Guests:</h2>
         <div id="guestsData">
           <!-- Guest json data here -->
-          <table id="guestsTable">
-            <tr>
-              <th>Name</th>
-              <th>Event</th>
-              <th>Diet</th>
-            </tr>
+          <table class="table table-bordered" id="guestsTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Diet</th>
+              </tr>
+            </thead>
           </table>
         </div>
 

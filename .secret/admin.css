@@ -1,10 +1,12 @@
-table,
-td {
-  border: 1px solid black;
+table{
+ text-align: left;
+ border-color: black;
 }
 
-#guestsData{
+
+
+/* #guestsData{
     position: relative;
     width: 100%;
     
-}
+} */

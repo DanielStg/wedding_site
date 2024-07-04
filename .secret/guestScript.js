@@ -1,17 +1,18 @@
-const guestNames = [];
-const guestDiets = [];
 var i;
+let table = document.getElementById("guestsTable");
+let row;
+let c1;
+let c2;
 
 fetch("guestList.php")
   .then((res) => res.json())
   .then((data) => {
-    //console.log(data[1][1]);
-
     for (i = 0; i < data.length; i++) {
-      guestNames.push(data[i][0]);
-      guestDiets.push(data[i][1]);
-    }
+      row = table.insertRow(-1);
+      c1 = row.insertCell(0);
+      c2 = row.insertCell(1);
 
-    console.log(guestNames);
-    console.log(guestDiets);
+      c1.innerText = data[i][0];
+      c2.innerText = data[i][1];
+    }
   });
