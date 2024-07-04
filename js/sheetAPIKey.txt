@@ -1,0 +1,23 @@
+AIzaSyChefewbC5h3qmbebEoSwYXmQtbKEEAUlQ
+
+// [{
+    
+    //      "guest": {
+    //         "fname": "George",
+    //         "events": "reception",
+    //         "diet": "gluten free"
+    //     }
+    // }, {    
+    //     "guest": {
+    //         "fname": "Dan",
+    //         "events": "reception",
+    //         "diet": ["gluten free", "vegan", "nut free"]
+    //     }
+    // }, {
+    //     "guest": {
+    //         "fname": "Becca",
+    //         "events": "reception",
+    //         "diet": "gluten free"
+    //     }
+     
+    // }]

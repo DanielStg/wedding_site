@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Wedding of Loren and Daniel</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+      <!-- side-panel-open pops up here on panel open -->
+      <!-- side panel -->
+      <div class="side-panel">
+        <div class="header_buttons">
+          <a href="../index.html"
+            ><button id="button_index" type="button">Home</button></a
+          >
+          <a href="../pages/rsvp.html"><button type="button">RSVP</button></a>
+          <a href="../pages/plan.html"
+            ><button type="button">Details</button></a
+          >
+          <a href="../pages/query.html"
+            ><button type="button">Questions</button></a
+          >
+          <a href="../index.html"
+            ><button
+              id="button_photos"
+              type="button"
+              onclick="alert('coming soon!')"
+            >
+              Photos
+            </button></a
+          >
+        </div>
+      </div>
+      <button class="side-panel-toggle" type="button">
+        <span class="material-icons sp-icon-open"
+          >keyboard_double_arrow_right</span
+        >
+        <span class="material-icons sp-icon-close"
+          >keyboard_double_arrow_left</span
+        >
+      </button>
+
+      <div class="welcome_card">
+        <p id="text_welcome"><b>Welcome to the secret page</b></p>
+        <div id="guestsData">
+          <!-- Guest json data here -->
+          <table id="guestsTable">
+            <tr>
+              <th>Name</th>
+              <th>Event</th>
+              <th>Diet</th>
+            </tr>
+          </table>
+        </div>
+
+        <a href="../pages/rsvp.html"
+          ><button id="button_rsvp" type="button">RSVP</button></a
+        >
+      </div>
+    </div>
+    <script src="guestScript.js"></script>
+    <script src="../js/panel.js"></script>
+  </body>
+</html>
