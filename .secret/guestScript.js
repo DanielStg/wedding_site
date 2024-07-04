@@ -1,22 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("../php/guests.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const dataDisplay = document.getElementById("guestsData");
-      console.log(data[0].guest.diet);
+const guestNames = [];
+const guestDiets = [];
+var i;
 
-      var table = document.getElementById("guestsTable");
+fetch("guestList.php")
+  .then((res) => res.json())
+  .then((data) => {
+    //console.log(data[1][1]);
 
-      for (let i = 0; i < data.length; i++) {
-        var row = table.insertRow();
-        var nameCell = row.insertCell(0);
-        var eventCell = row.insertCell(1);
-        var dietCell = row.insertCell(2);
+    for (i = 0; i < data.length; i++) {
+      guestNames.push(data[i][0]);
+      guestDiets.push(data[i][1]);
+    }
 
-        nameCell.innerHTML = data[i].guest.fname;
-        eventCell.innerHTML = data[i].guest.events;
-        dietCell.innerHTML = data[i].guest.diet;
-      }
-    })
-    .catch((error) => console.error("Error fetching JSON data:", error));
-});
+    console.log(guestNames);
+    console.log(guestDiets);
+  });

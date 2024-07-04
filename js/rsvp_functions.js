@@ -15,9 +15,7 @@ EL_formRSVP.addEventListener("submit", (ev) => {
       //Gets the res and makes it a data object which displays json
       console.log(data);
       EL_formRSVP.reset();
-
       alert("Thankyou! You have successfully RSVP!");
-
       document.location.href = "../index.html";
     });
 });

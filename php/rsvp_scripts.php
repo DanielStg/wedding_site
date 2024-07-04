@@ -19,7 +19,7 @@ if (
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
-        echo "RSVP_SCRIPT: Server connection failed";
+        echo "RSVP_SCRIPT: Server connection failed\n";
         die("Connection failed: " . $conn->connect_error);
     }
     $sql = "INSERT INTO guests(Name, Diet) VALUES ('$guestname', '$guestdiet')";
@@ -33,7 +33,6 @@ if (
     }
     
     $conn->close();
-
     
     echo "RSVP_SCRIPT End\n";
  }
