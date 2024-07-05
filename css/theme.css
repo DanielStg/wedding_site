@@ -4,6 +4,8 @@
 #FFFFFF - white
 #231f20 - grey/black
 #000000 - true black
+
+#e98c7b - lighter flowers
 */
 
 @font-face{
@@ -21,8 +23,9 @@ label, p {
 }
 
 body{
-    background-image: url("../images/wedding_theme.png");
-    background-repeat: no-repeat;
+    background-image: url("../images/wedding_theme_nobottom.png");
+    /*background-repeat: no-repeat; */
+    background-repeat: repeat;
     /* background-size: 100vw 105vh; */
     background-size: 100vw;
     /* background-size: cover; */
@@ -61,7 +64,7 @@ body{
 
 /* Add a background color on hover */
 .header_buttons button:hover {
-  background-color: #CE6857;
+  background-color: #e98c7b;
 } 
 
 .wrapper {
@@ -76,7 +79,7 @@ body{
     width: 200px;
     flex-shrink: 0;
     padding-top: 40px;
-    background: #CE6857;
+    background: #e98c7b;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
     /* box-shadow: 0px 0px 50px #CE6857; */
   }
@@ -89,7 +92,7 @@ body{
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    background: #CE6857;
+    background: #e98c7b;
     border: none;
     border-radius: 0 5px 5px 0;
     outline: none;
