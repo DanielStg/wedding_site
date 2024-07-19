@@ -16,6 +16,6 @@ EL_formRSVP.addEventListener("submit", (ev) => {
       console.log(data);
       EL_formRSVP.reset();
       alert("Thankyou! You have successfully RSVP!");
-      document.location.href = "../index.html";
+      //document.location.href = "../index.html";
     });
 });
