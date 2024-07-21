@@ -42,12 +42,17 @@ EL_formRSVP.addEventListener("submit", (ev) => {
     .then((res) => res.json())
     .then((data) => {
       //Gets the res and makes it a data object which displays json
+      // console.log(data[0].name);
+      // console.log(data[0].diet);
       console.log(data[0].name);
-      console.log(data[0].diet);
 
-      writeUserData(data[0].name, data[0].diet);
+      //writeUserData(data[0].name, data[0].diet);
       EL_formRSVP.reset();
       alert("Thankyou! You have successfully RSVP!");
       //document.location.href = "../index.html";
     });
 });
+
+// ON RETURN - Trying to get firebase working with AWS PROD.. Having orginal json
+//formatting issues. no issues locally but issues on prod
+// pass json better from php or parse as text array.

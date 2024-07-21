@@ -17,9 +17,12 @@ if (
         ]
      ];
 
-     echo json_encode($newData);
-}
-  
+     //echo $newData[0];
+    echo json_encode($newData);
+    }
+    else{
+        echo "null";
+    }
 ?>
 
 
