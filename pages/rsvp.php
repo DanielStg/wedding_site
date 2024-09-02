@@ -38,17 +38,17 @@
              
              <br><label>Do you have any dietry requirements?</label><br>
              
-             <input type="checkbox" name="diet" value="none">
+             <input type="checkbox" name="diet[]" value="none">
              <label>None</label><br>
-             <input type="checkbox" name="diet" value="vegeterian">
+             <input type="checkbox" name="diet[]" value="vegeterian">
              <label>Vegeterian</label><br>
-             <input type="checkbox" name="diet" value="vegan">
+             <input type="checkbox" name="diet[]" value="vegan">
              <label>Vegan</label><br>
-             <input type="checkbox" name="diet" value="gluten free">
+             <input type="checkbox" name="diet[]" value="gluten free">
              <label>Gluten Free</label><br>
-             <input type="checkbox" name="diet" value="dairy free">
+             <input type="checkbox" name="diet[]" value="dairy free">
              <label>Dairy Free</label><br>
-             <input type="checkbox" name="diet" value="nut free">
+             <input type="checkbox" name="diet[]" value="nut free">
              <label>Nut Free</label><br>
             
             <!-- TODO

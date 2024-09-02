@@ -14,6 +14,7 @@ EL_formRSVP.addEventListener("submit", (ev) => {
     fetch(EL_formRSVP.action, {
         method: 'POST', //POST method
         body: new FormData(EL_formRSVP), //Turns form data into JSON string
+    
     }).then(res => res.json()).then(data =>{ //Gets the res and makes it a data object which displays json
 
         EL_formRSVP.reset();
