@@ -56,3 +56,7 @@ EL_formRSVP.addEventListener("submit", (ev) => {
 // ON RETURN - Trying to get firebase working with AWS PROD.. Having orginal json
 //formatting issues. no issues locally but issues on prod
 // pass json better from php or parse as text array.
+//I think the issue is AWS amplify not executing php?
+
+// Appears AWS doesnt support PHP. NO resources online howline how to usePHP
+//next to use gen 2 ts for backend logic.
