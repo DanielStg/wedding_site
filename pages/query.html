@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html lang='en'>
- <head>
-     <link rel="stylesheet" href="../css/query.css">
-     <link rel="stylesheet" href="../css/theme.css">
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../css/query.css" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <title>QUERY</title>
-  <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  </style>
-  <script>
-  </script>
- </head>
- <body>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+  <style></style>
+  <script></script>
+</head>
 
-         <div class="header_buttons">
-        
-            <a href="../index.php"><button id=button_index type="button">Home</button></a>
-            <a href="../pages/rsvp.php"><button id=button_rsvp type="button">RSVP</button></a>
-            <a href="../pages/plan.html"><button id=button_plan type="button">Details</button></a>
-            <a href="../pages/query.html"><button id=button_queries type="button">Questions</button></a>
-            <a href="../index.php"><button id=button_photos type="button" onclick="alert('coming soon!')">Photos</button></a>
-        
+<body>
 
-     </div>
-     <div class="query_page">
-         <p id="text_query"><b>QUERY PAGE</b></p>
-
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- side panel -->
+    <div class="side-panel">
+      <div class="header_buttons">
+        <a href="../index.html"><button id="button_index" type="button">Home</button></a>
+        <a href="../pages/rsvp.html"><button type="button">RSVP</button></a>
+        <a href="../pages/plan.html"><button type="button">Details</button></a>
+        <a href="../pages/query.html"><button type="button">Questions</button></a>
+        <a href="../index.html"><button id="button_photos" type="button" onclick="alert('coming soon!')">
+            Photos
+          </button></a>
+          <a href="../pages/music.html"><button type="button">Music</button></a>
+      </div>
     </div>
-        
- </body>
+    <button class="side-panel-toggle" type="button">
+      <span class="material-icons sp-icon-open">keyboard_double_arrow_right</span>
+      <span class="material-icons sp-icon-close">keyboard_double_arrow_left</span>
+    </button>
+    <div class="query_page">
+      <p id="text_query"><b>QUERY PAGE</b></p>
+    </div>
+    <script src="../js/panel.js"></script>
+</body>
+
 </html>

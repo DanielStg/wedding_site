@@ -13,16 +13,19 @@ a{
 .plan_page{
     text-align: center;
     color:black;
-    border: 2px solid black;
-    background:rgba(255,255,255, 0.8);
+    border: 1px solid #CE6857;
+    /* background:#FFFFFF; */
+    box-shadow: 0px 0px 50px #CE6857;
+  
     
     /* div width */
     width: 60%;
     /* keeps centered somehow idfk */
-    position: relative;
+    position: absolute;
     /* centers content horizontally */
     left: 50%;
-    transform: translate(-50%);
+    top: 10%;
+    transform: translate(-50%,-10%);
 
     /* margin to top and bottom so it looks tidy */
     margin-top: 1%;
@@ -46,7 +49,8 @@ a{
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #CE6857;
+  background-color: #e98c7b;
+
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -54,14 +58,14 @@ a{
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #f7e0d4;
     transition: max-height 0.2s ease-out;
+    text-align: left;
 }
 
 .collapsible:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: white;
   float: right;
   margin-left: 5px;
 }

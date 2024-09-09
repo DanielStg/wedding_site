@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!--
+
+TODO:
+
+(/)Th next to 8 smaller
+(/)Font size bigger?
+Not enough going on, looks amateur
+Keep the card, make it smaller, add photos. Move it up the screen. Strip of opaque photos.
+5 or 7 photos?
+
+(/) Date size smaller thasn other text
+
+RSVP page; Please RSVP by 30th NOVEMBER.
+
+DIETRY//ALERGIES/TExt box
+
+Details page - remove popout js, Scroll threough page alternating colours.
+gift/wishing well.
+
+ring waihi cabs - shuttle service - booked in advance?is thios possible?
+
+-->
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> -->
+    <title>Wedding of Loren and Daniel</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+      <!-- side-panel-open pops up here on panel open -->
+      <!-- side panel -->
+      <div class="side-panel">
+        <div class="header_buttons">
+          <a href="index.html"
+            ><button id="button_index" type="button">Home</button></a
+          >
+          <a href="pages/rsvp.html"><button type="button">RSVP</button></a>
+          <a href="pages/plan.html"><button type="button">Details</button></a>
+          <a href="pages/query.html"
+            ><button type="button">Questions</button></a
+          >
+          <a href="index.html"
+            ><button
+              id="button_photos"
+              type="button"
+              onclick="alert('coming soon!')"
+            >
+              Photos
+            </button></a
+          >
+          <a href="pages/music.html"><button type="button">Music</button></a>
+        </div>
+      </div>
+      <button class="side-panel-toggle" type="button">
+        <span class="material-icons sp-icon-open"
+          >keyboard_double_arrow_right</span
+        >
+        <span class="material-icons sp-icon-close"
+          >keyboard_double_arrow_left</span
+        >
+      </button>
+
+      <div class="welcome_card">
+        <p id="text_welcome"><b>The Wedding of</b></p>
+        <p id="text_name">
+          <b
+            >Loren Monique Goodhue<br />
+            &<br />
+            Daniel Jefferson St George</b
+          >
+        </p>
+        <p id="text_date"><b>8 February 2025</b></p>
+        <a href="pages/rsvp.html"
+          ><button id="button_rsvp" type="button">RSVP</button></a
+        >
+      </div>
+    </div>
+
+    <script src="js/panel.js"></script>
+  </body>
+</html>

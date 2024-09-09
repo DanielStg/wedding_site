@@ -1,60 +1,62 @@
+import {
+  getDatabase,
+  ref,
+  child,
+  push,
+  update,
+  set,
+} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 
+const firebaseConfig = {
+  // ...
+  // The value of `databaseURL` depends on the location of the database
+  databaseURL: "https://wedding-32aed-default-rtdb.firebaseio.com/",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
+
+function writeUserData(name, diet) {
+  const db = getDatabase();
+  set(ref(db, "GuestList/" + name), {
+    Diet: diet,
+  });
+}
 
 const EL_formRSVP = document.querySelector("#form_rsvp");
-        
+
 //Add an event listener for when the form submits
-// addEventListener("type", func());
-// (ev) => {} is creating function
-EL_formRSVP.addEventListener("submit", (ev) => { 
+EL_formRSVP.addEventListener("submit", (ev) => {
+  //Prevents default form submit
+  ev.preventDefault();
 
-    //Prevents default form submit
-    ev.preventDefault();
+  //Fetch the data from the form action (submit)
+  fetch(EL_formRSVP.action, {
+    method: "POST", //POST method
+    body: new FormData(EL_formRSVP),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      //Gets the res and makes it a data object which displays json
+      // console.log(data[0].name);
+      // console.log(data[0].diet);
+      console.log(data[0].name);
 
-    //Fetch the data from the form action (submit)
-    fetch(EL_formRSVP.action, {
-        method: 'POST', //POST method
-        body: new FormData(EL_formRSVP), //Turns form data into JSON string
-    
-    }).then(res => res.json()).then(data =>{ //Gets the res and makes it a data object which displays json
-
-        EL_formRSVP.reset();
-
-        alert("Thankyou! You have successfully RSVP!");
-
-        document.location.href = "../index.php";
+      //writeUserData(data[0].name, data[0].diet);
+      EL_formRSVP.reset();
+      alert("Thankyou! You have successfully RSVP!");
+      //document.location.href = "../index.html";
     });
-    
-    
 });
 
+// ON RETURN - Trying to get firebase working with AWS PROD.. Having orginal json
+//formatting issues. no issues locally but issues on prod
+// pass json better from php or parse as text array.
+//I think the issue is AWS amplify not executing php?
 
-//  EXPLORE THIS JQUERY LATER - Might be simpler of above -->
-//  $(document).ready(function(){
-// var $form = $('form');
-// $form.submit(function(){
-//     $.post($(this).attr('action'), $(this).serialize(), function(response){
-//             // do something here on success
-//     },'json');
-//     return false;
-// });
-// });
-
-// // this is the id of the form
-// $("#idForm").submit(function(e) {
-
-//     e.preventDefault(); // avoid to execute the actual submit of the form.
-
-//     var form = $(this);
-//     var actionUrl = form.attr('action');
-    
-//     $.ajax({
-//         type: "POST",
-//         url: actionUrl,
-//         data: form.serialize(), // serializes the form's elements.
-//         success: function(data)
-//         {
-//         alert(data); // show response from the php script.
-//         }
-//     });
-    
-// });
+// Appears AWS doesnt support PHP. NO resources online howline how to usePHP
+//next to use gen 2 ts for backend logic.
