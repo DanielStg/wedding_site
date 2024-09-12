@@ -8,6 +8,15 @@
 #e98c7b - lighter flowers
 */
 
+/* NEW PALLET
+#FFFFFF - background
+#e8cfc1 - stem
+#d8133c - flower
+#000000 - text
+
+
+*/
+
 @font-face{
     font-family: homeFont;
     src: url(../font/CormorantGaramond-Light.ttf);
@@ -24,7 +33,7 @@ label, p {
 }
 
 body{
-    background-image: url("../images/wedding_theme_nobottom.png");
+    background-image: url("../images/wedding_theme_white.png");
     /*background-repeat: no-repeat; */
     background-repeat: repeat;
     /* background-size: 100vw 105vh; */
