@@ -105,7 +105,7 @@ body{
   }
 
 /* Side panel button */
-.side-panel-toggle{
+/* .side-panel-toggle{
     z-index: 1;
     width: 40px;
     height: 40px;
@@ -118,7 +118,7 @@ body{
     outline: none;
     cursor: pointer;
     
-} */
+}  */
 
 
 /* .side-panel-toggle:hover {

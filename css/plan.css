@@ -13,9 +13,9 @@ a{
 .plan_page{
     text-align: center;
     color:black;
-    border: 1px solid #CE6857;
+    /* border: 1px solid #CE6857; */
     /* background:#FFFFFF; */
-    box-shadow: 0px 0px 15px #CE6857;
+    box-shadow: 0px 0px 5px #CE6857;
   
     
     /* div width */
